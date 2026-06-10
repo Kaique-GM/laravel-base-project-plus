@@ -1,4 +1,4 @@
-# 🚀 Laravel Base Project (Livewire + Tailwind)
+# 🚀 Laravel Base Project (Livewire + Filament + Tailwind)
 
 Este repositório é um **projeto base (template)** criado para servir como ponto de partida para novos projetos.
 
@@ -6,6 +6,7 @@ Ele já vem configurado com:
 
 - Laravel
 - Livewire
+- Filament
 - TailwindCSS
 - Layout global (Navbar + Footer)
 - Estrutura inicial pronta para desenvolvimento
@@ -118,6 +119,20 @@ Caso o projeto utilize uploads, crie o link simbólico do storage:
 php artisan storage:link
 ```
 
+## 🛡️ Acesso ao painel administrativo
+
+Crie um usuário administrador para acessar o painel:
+
+```bash
+php artisan make:filament-user
+```
+Durante a criação, informe os dados solicitados:
+
+- Nome
+- E-mail
+- Senha
+
+
 ## ▶️ Rodando o projeto
 
 Rodar servidor Laravel:
@@ -132,10 +147,18 @@ Rodar o Vite:
 npm run dev
 ```
 
-Agora acesse:
+Após iniciar o projeto, acesse:
+
+### Aplicação
 
 ```bash
 http://127.0.0.1:8000
+```
+
+### Painel administrativo
+
+```bash
+http://127.0.0.1:8000/admin
 ```
 
 ## 🏗️ Build para produção
