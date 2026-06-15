@@ -1,12 +1,13 @@
 import './bootstrap';
 
-// Menu Nav
-const btn = document.getElementById('mobile-menu-btn');
-const menu = document.getElementById('mobile-menu');
+import { initAnimations } from './modules/animations';
+import { initMenu } from './modules/menu';
+import { initPrivacyModal } from './modules/privacyModal';
 
-btn.addEventListener('click', () => {
-    menu.classList.toggle('max-h-0');
-    menu.classList.toggle('opacity-0');
-    menu.classList.toggle('max-h-[500px]');
-    menu.classList.toggle('opacity-100');
+document.addEventListener("DOMContentLoaded", () => {
+
+    initMenu();
+    initPrivacyModal();
+    initAnimations();
+
 });
