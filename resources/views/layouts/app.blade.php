@@ -34,6 +34,8 @@
 
     <livewire:components.float-icons />
 
+    <livewire:components.policy-modal />
+
     <livewire:components.footer />
 
     @livewireScripts
